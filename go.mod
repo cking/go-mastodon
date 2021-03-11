@@ -1,4 +1,4 @@
-module github.com/kura/go-mastodon
+module github.com/cking/go-mastodon
 
 go 1.15
 

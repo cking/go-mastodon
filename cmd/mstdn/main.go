@@ -15,7 +15,7 @@ import (
 	"strings"
 
 	"github.com/fatih/color"
-	"github.com/mattn/go-mastodon"
+	"github.com/cking/go-mastodon"
 	"github.com/mattn/go-tty"
 	"github.com/urfave/cli"
 	"golang.org/x/net/html"

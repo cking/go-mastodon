@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/mattn/go-mastodon"
+	"github.com/cking/go-mastodon"
 	"github.com/urfave/cli"
 )
 
