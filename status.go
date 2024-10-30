@@ -115,6 +115,7 @@ type Media struct {
 	Thumbnail   io.Reader
 	Description string
 	Focus       string
+	Filename    *string
 }
 
 func (m *Media) bodyAndContentType() (io.Reader, string, error) {
@@ -122,7 +123,9 @@ func (m *Media) bodyAndContentType() (io.Reader, string, error) {
 	mw := multipart.NewWriter(&buf)
 
 	fileName := "upload"
-	if f, ok := m.File.(*os.File); ok {
+	if m.Filename != nil {
+		fileName = *m.Filename
+	} else if f, ok := m.File.(*os.File); ok {
 		fileName = f.Name()
 	}
 	file, err := mw.CreateFormFile("file", fileName)
